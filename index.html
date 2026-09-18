@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>নার্স মাহামুদ আব্বাস - পেশাদার হোম নার্সিং সার্ভিস | যাত্রাবাড়ী, ঢাকা</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(rgba(0, 123, 255, 0.88), rgba(0, 86, 179, 0.92)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .btn-call {
+            background-color: #007bff;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #0056b3;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: #007bff;
+            display: block;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        /* Services List */
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .service-item {
+            background: white;
+            padding: 20px;
+            border-left: 4px solid #007bff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            font-weight: 500;
+        }
+
+        /* Booking Form */
+        .booking-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Floating Quick Buttons for Mobile */
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .float-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .float-whatsapp {
+            background-color: #25D366;
+        }
+
+        .float-call {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Hero -->
+    <header>
+        <h1>পেশাদার হোম নার্সিং সেবা</h1>
+        <p>নার্স মাহামুদ আব্বাস | দক্ষ ও অভিজ্ঞ স্বাস্থ্যসেবা প্রদানকারী</p>
+        <p>📍 সেবা এলাকা: যাত্রাবাড়ী ও সমগ্র ঢাকা শহর</p>
+        
+        <div class="cta-buttons">
+            <a href="tel:01815665169" class="btn btn-call">📞 সরাসরি কল করুন</a>
+            <a href="https://wa.me/8801815665169" class="btn btn-whatsapp" target="_blank">💬 হোয়াটসঅ্যাপে কথা বলুন</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- About Section -->
+        <h2 class="section-title">আমার সেবা সম্পর্কে</h2>
+        <div class="info-grid">
+            <div class="card">
+                <h3>পেশাদার স্বাস্থ্যসেবা</h3>
+                <p>রোগীদের নিজস্ব বাসায় বা হাসপাতালে অত্যন্ত যত্নশীল ও দায়িত্বশীল নার্সিং সেবা নিশ্চিত করি।</p>
+            </div>
+            <div class="card">
+                <h3>প্রধান লোকেশন</h3>
+                <p>যাত্রাবাড়ী, ঢাকা। যাত্রাবাড়ী ও পার্শ্ববর্তী এলাকায় জরুরি সেবা দ্রুত পৌঁছানো হয়।</p>
+            </div>
+            <div class="card">
+                <h3>যোগাযোগের তথ্য</h3>
+                <p>ফোন/হোয়াটসঅ্যাপ: <strong>০১৮১৫৬৬৫১৬৯</strong><br>যেকোনো প্রয়োজনে সরাসরি কল বা মেসেজ করুন।</p>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <h2 class="section-title">উপলব্ধ নার্সিং সেবাসমূহ</h2>
+        <div class="services-list">
+            <div class="service-item">✓ হোম নার্সিং কেয়ার (Home Nursing Care)</div>
+            <div class="service-item">✓ ইনজেকশন ও আইভি ক্যানুলা (Injection & IV Cannula)</div>
+            <div class="service-item">✓ স্যালাইন ও আইভি ড্রিপ (Saline & IV Fluid)</div>
+            <div class="service-item">✓ ক্ষত পরিচর্যা ও ড্রেসিং (Wound Care & Dressing)</div>
+            <div class="service-item">✓ ক্যাথেটার ও রাইলস টিউব সেটআপ (Catheter & Ryle's Tube)</div>
+            <div class="service-item">✓ বিপি ও ডায়াবেটিস মনিটরিং (BP & Diabetes Check)</div>
+            <div class="service-item">✓ প্রবীণ ও অপারেশন পরবর্তী যত্ন (Elderly & Post-Op Care)</div>
+            <div class="service-item">✓ ২৪/৭ জরুরি পেশাদার নার্সিং সাপোর্ট</div>
+        </div>
+
+        <!-- Booking Form -->
+        <h2 class="section-title">সার্ভিস বুকিং বা মেসেজ পাঠান</h2>
+        <div class="booking-form">
+            <form action="https://wa.me/8801815665169" method="get" target="_blank">
+                <div class="form-group">
+                    <label for="name">রোগী/স্বজনের নাম:</label>
+                    <input type="text" id="name" required placeholder="আপনার নাম লিখুন">
+                </div>
+                <div class="form-group">
+                    <label for="phone">মোবাইল নম্বর:</label>
+                    <input type="tel" id="phone" required placeholder="০১৮XXXXXXXX">
+                </div>
+                <div class="form-group">
+                    <label for="location">ঠিকানা/লোকেশন:</label>
+                    <input type="text" id="location" placeholder="যেমন: যাত্রাবাড়ী, ঢাকা" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">প্রয়োজনীয় সেবা:</label>
+                    <select id="service">
+                        <option value="Home Nursing">হোম নার্সিং কেয়ার</option>
+                        <option value="Injection/Saline">ইনজেকশন/স্যালাইন</option>
+                        <option value="Wound Dressing">ড্রেসিং ও ক্ষত পরিচর্যা</option>
+                        <option value="Catheterization">ক্যাথেটার/টিউব পরিবর্তন</option>
+                        <option value="Other">অন্যান্য</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="details">বিস্তারিত তথ্য (যদি থাকে):</label>
+                    <textarea id="details" rows="4" placeholder="রোগীর বর্তমান অবস্থা বা সমস্যার কথা সংক্ষেপে লিখুন..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">হোয়াটসঅ্যাপে মেসেজ পাঠান</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Floating Buttons for Quick Mobile Access -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/8801815665169" class="float-btn float-whatsapp" target="_blank" title="WhatsApp">💬</a>
+        <a href="tel:01815665169" class="float-btn float-call" title="Call Now">📞</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; ২০২৬ নার্স মাহামুদ আব্বাস | সর্বস্বত্ব সংরক্ষিত।</p>
+        <p>যাত্রাবাড়ী, ঢাকা | মোবাইল: ০১৮১৫৬৬৫১৬৯</p>
+    </footer>
+
+</body>
+</html>
